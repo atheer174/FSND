@@ -3,8 +3,8 @@
 #----------------------------------------------------------------------------#
 
 import json
-import dateutil.parser✅
-import babel✅
+import dateutil.parser
+import babel
 import sys
 from flask import (
     Flask, 
@@ -16,10 +16,10 @@ from flask import (
     url_for
 )
 from flask_moment import Moment
-from flask_sqlalchemy import SQLAlchemy✅
+from flask_sqlalchemy import SQLAlchemy
 import logging
 from logging import Formatter, FileHandler
-from flask_wtf import Form✅
+from flask_wtf import Form
 from forms import *
 from flask_migrate import Migrate
 from models import db, Venue, Artist, Show
