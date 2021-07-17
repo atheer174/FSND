@@ -14,9 +14,6 @@ class Venue(db.Model):
     image_link = db.Column(db.String(500))
     facebook_link = db.Column(db.String(120))
     # TODO: implement any missing fields, as a database migration using Flask-Migrate
-    num_upcoming_shows = db.Column(db.Integer)
-    upcoming_shows_count = db.Column(db.Integer, default=0)
-    past_shows_count = db.Column(db.Integer)
     website = db.Column(db.String(120))
     seeking_talent = db.Column(db.Boolean, default=False)
     seeking_description = db.Column(db.String(500))
@@ -41,9 +38,6 @@ class Artist(db.Model):
     website = db.Column(db.String(120))
     seeking_venue=db.Column(db.Boolean)
     seeking_description = db.Column(db.String(500))
-    num_upcoming_shows = db.Column(db.Integer)
-    upcoming_shows_count = db.Column(db.Integer, default=0)
-    past_shows_count = db.Column(db.Integer)
     shows = db.relationship('Show', backref=db.backref('artist'), lazy="joined")
     #shows = db.relationship('Show',backref='artist',lazy=True, cascade="save-update, merge, delete")
    
